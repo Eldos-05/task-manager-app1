@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTaskContext } from '../context/TaskContext';
 
-function AddTask({ addTask }) {
+function AddTask() {
   const [task, setTask] = useState('');
+  const { addTask } = useTaskContext();
 
   const handleAddTask = () => {
     if (task.trim()) {
